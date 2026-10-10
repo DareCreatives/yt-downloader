@@ -1,1 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>YT Downloader — Clean & Safe</title>
+<link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+<main class="container">
+  <header>
+    <h1>YT Downloader</h1>
+    <p class="subtitle">Clean, ad-free, no fake buttons. Powered by yt-dlp.</p>
+  </header>
 
+  <form id="download-form" autocomplete="off">
+    <input id="url" type="url" placeholder="Paste a YouTube URL…" required />
+
+    <div class="controls">
+      <label>
+        Format
+        <select id="format">
+          <option value="mp4" selected>MP4 (video)</option>
+          <option value="mp3">MP3 (audio)</option>
+        </select>
+      </label>
+
+      <label>
+        Quality
+        <select id="quality">
+          <option value="best" selected>Best available</option>
+          <option value="1080">1080p</option>
+          <option value="720">720p</option>
+          <option value="480">480p</option>
+          <option value="360">360p</option>
+        </select>
+      </label>
+
+      <button type="submit" id="submit-btn">Download</button>
+    </div>
+  </form>
+
+  <section id="status" class="status hidden"></section>
+
+  <footer>
+    <p>
+      For personal / fair-use only. Respect copyright and YouTube's ToS.
+    </p>
+  </footer>
+</main>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
