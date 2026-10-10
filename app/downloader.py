@@ -40,7 +40,10 @@ def _base_opts() -> dict:
         "retries": 3,
         "fragment_retries": 3,
         "socket_timeout": 30,
-        "restrictfilenames": True,    # safe filenames
+        "restrictfilenames": True, 
+        cookie_file = _get_cookie_file()
+if cookie_file:
+    opts["cookiefile"] = cookie_file# safe filenames
     }
     if settings.cookies_file and Path(settings.cookies_file).is_file():
         opts["cookiefile"] = settings.cookies_file
