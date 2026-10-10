@@ -1,0 +1,16 @@
+# Server
+HOST=0.0.0.0
+PORT=8000
+DEBUG=false
+
+# Download settings
+DOWNLOAD_DIR=./downloads
+MAX_CONCURRENT_DOWNLOADS=3
+JOB_TIMEOUT_SECONDS=600
+FILE_TTL_SECONDS=3600
+
+# Optional: path to a cookies.txt file for age-restricted / logged-in content
+# COOKIES_FILE=./cookies.txt
+
+# Optional: restrict CORS (comma-separated)
+CORS_ORIGINS=*
