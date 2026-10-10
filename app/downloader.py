@@ -1,3 +1,13 @@
+import os, tempfile
+
+def _get_cookie_file():
+    cookie_content = os.getenv("YT_COOKIES")
+    if not cookie_content:
+        return None
+    f = tempfile.NamedTemporaryFile(mode='w', suffix='.txt', delete=False)
+    f.write(cookie_content)
+    f.close()
+    return f.name
 """Wrapper around yt-dlp used by the job manager."""
 from __future__ import annotations
 
