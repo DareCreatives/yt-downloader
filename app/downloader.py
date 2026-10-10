@@ -41,6 +41,13 @@ def _base_opts() -> dict:
         "fragment_retries": 3,
         "socket_timeout": 30,
         "restrictfilenames": True, 
+        opts["extractor_args"] = {
+    "youtube": {
+        "player_client": ["mweb", "tv"]
+    }
+}
+opts["source_address"] = "0.0.0.0"
+opts["force_ipv4"] = True
         cookie_file = _get_cookie_file()
 if cookie_file:
     opts["cookiefile"] = cookie_file# safe filenames
